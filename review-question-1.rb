@@ -1,6 +1,6 @@
 ## QUESTION 1
-
-pokemon = [
+require 'pry'
+pokemon = [ #[ { [ {} ] }, {},{} ]
   {
     "id": 1,
     "name": "bulbasaur",
@@ -67,3 +67,10 @@ pokemon = [
 # How would you return an array of all of the pokemon's names?
 # How would you determine whether or not the pokemon array contained any pokemon with a weight greater than 60?
 #  whatever method you use should return true if there are any such pokemon, false if not.
+
+pokemon.each do |pokes|
+    if pokes[:name] == "bulbasaur"
+        return pokes[:abilities]
+    end
+end
+binding.pry
